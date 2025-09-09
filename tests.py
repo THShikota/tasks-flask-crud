@@ -2,7 +2,6 @@ import pytest
 import requests
 
 # CRUD
-
 BASE_URL = 'http://127.0.0.1:5000'
 tasks = []
 
@@ -32,7 +31,6 @@ def test_get_task():
         assert response.status_code == 200
         response_json = response.json()
         assert task_id == response_json['id']
-
 
 def test_update_task():
     if tasks:
